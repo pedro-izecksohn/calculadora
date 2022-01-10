@@ -24,6 +24,11 @@ int main ()
   return EXIT_FAILURE;
  }
  getchar();
+ printf ("Os operadores basicos são '+' '-' '*' '/'.\n");
+ printf ("Para raiz quadrada use 'v'.\n");
+ printf ("Para raiz cúbica use 'w'.\n");
+ printf ("Para operações com memoría use 'm+' 'm-' 'mr' 'mc' .\n");
+ printf ("Para limpar o visor use 'c'.\n");
  while (1)
  {
   op = 0;
@@ -37,6 +42,11 @@ int main ()
      visor = sqrt (visor);
      printf ("Agora o visor é %lf .\n", visor);
    }
+   else if ((op == 'w')||(op == 'W'))
+   {
+     visor = cbrt (visor);
+     printf ("Agora o visor e %lf .\n", visor);
+   }  
    else if ((op == 'c')||(op == 'C'))
    {
      op = '+';
@@ -85,6 +95,11 @@ int main ()
   {
    temp = sqrt (visor);
    printf ("Agora o temp é %lf .\n", temp);
+  }
+  else if ((buffer[0] == 'w')||(buffer[0] == 'W'))
+  {
+    temp = cbrt (visor);
+    printf ("Agora o temp é %lf .\n", temp);
   }
   else if ((buffer[0] == 'c')||(buffer[0] == 'C'))
   {
